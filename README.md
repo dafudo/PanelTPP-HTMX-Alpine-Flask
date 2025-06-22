@@ -6,7 +6,7 @@ Prototyp systemu zarządzania placówką medyczną oparty o Flask, HTMX, Alpine.
 
 1. **Autoryzacja i sesje** – prosta obsługa logowania użytkowników (na start użytkownik `admin` z hasłem `password`).
 2. **Kalendarz wizyt** – widok tabelaryczny z listą umówionych wizyt oraz przyciskiem do odświeżania danych przy użyciu HTMX.
-3. **Zarządzanie klientami i personelem** – kolejne moduły będą dodawane stopniowo. Na początek dane przechowywane są w pamięci aplikacji.
+3. **Zarządzanie klientami i personelem** – proste listy i formularze do dodawania nowych rekordów (dane w pamięci aplikacji).
 4. **Rozbudowa panelu** – w przyszłości planowane są statystyki, moduł księgowy i portal klienta.
 
 Aby uruchomić aplikację:
