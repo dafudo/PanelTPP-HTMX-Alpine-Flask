@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Panel{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between">
+            <div><a href="/">Panel</a></div>
+            {% if session.get('user') %}
+            <div>
+                <a class="mr-4" href="/calendar">Kalendarz</a>
+                <a href="/logout">Wyloguj</a>
+            </div>
+            {% endif %}
+        </div>
+    </nav>
+    <div class="container mx-auto mt-4">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

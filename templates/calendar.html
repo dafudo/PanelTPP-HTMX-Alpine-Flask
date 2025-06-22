@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Kalendarz{% endblock %}
+{% block content %}
+<h1 class="text-2xl font-bold mb-4">Kalendarz Wizyt</h1>
+<div class="mb-2">
+    <button class="bg-green-600 text-white px-4 py-2 rounded" 
+            hx-get="/refresh_appointments" hx-target="#appointments" 
+            hx-swap="innerHTML">
+        Odśwież dane
+    </button>
+</div>
+<div id="appointments">
+    {% include 'appointments_table.html' %}
+</div>
+{% endblock %}
